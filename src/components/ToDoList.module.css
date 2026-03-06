@@ -1,0 +1,177 @@
+
+body {
+    background: linear-gradient(to bottom left, rgb(15, 15, 15), #152331, rgb(15, 15, 15));
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    
+    max-width: 400px;
+    margin: 40px, auto;
+    padding: 20px;
+    background: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+
+.title {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 0.4rem;
+    row-gap: -0.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 46px;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+}
+
+.to {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.do {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.list {
+    font-size:90px;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+
+.inputContainer {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background: none;
+    outline: none;
+    color: #ffffff;
+    transition: all 0.5s;
+
+
+}
+
+.input:hover{
+    color: white;
+    margin: 2px;
+    transition: all 0.5s;
+}
+
+.button {
+    background: #007bff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    padding: 10px 16px;
+    border: 2px white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.button:hover {
+    background: none;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #007bff;
+    transition: all 0.2s;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.p1 {
+    margin: 0;
+    font-size: 10px;
+    color: #525252;
+    cursor: default;
+}
+
+.taskList {
+    list-style: none;
+    padding: 0;
+}
+
+.removeBttn {
+    color: rgb(216, 244, 255);
+    padding: 10px;
+    margin-bottom: 8px;
+    transition: all 0.5s;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    transition: all 0.5s;
+}
+
+.removeBttn:hover {
+    color: rgb(216, 244, 255);
+    cursor: pointer;
+    border: 2px solid #007bff;
+    transition: all 0.5s;
+}
+
+.taskItem {
+    background: none;
+    color: rgb(216, 244, 255);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+}
+
+.taskItem:hover {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    border: 2px solid #007bff;
+    transition: all 0.5s;
+
+}
+
+@keyframes taskAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+.taskItem {
+    animation: taskAppear 0.5s ease;
+}
