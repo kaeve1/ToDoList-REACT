@@ -54,7 +54,8 @@ const ToDoList = () => {
                 <div className={styles.list}>List</div>
             </h1>
             <div className={styles.inputContainer}>
-                <input type="text"
+                <input
+                    type="text"
                     placeholder={tasks.length == 0 ? mensagemUm : msg}
                     className={styles.input}
                     value={task}
